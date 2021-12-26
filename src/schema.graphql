@@ -1,0 +1,16 @@
+type Query {
+  allProducts: [Product]
+  getProductByCode(code: String!): Product
+  getOrderPackaging(code: String!, count: Int!): [String]
+}
+
+type Packs {
+  count: Int
+  price: Int
+}
+
+type Product {
+  name: String
+  code: String
+  packagingOptions: [Packs]
+}
